@@ -5,8 +5,9 @@ body, html {
   height: 100%;
 }
 
-.menu-text, .about, .projects, .top-bar {
+.menu-text, .about, .projects, .articles, .top-bar, .title-bar, .off-canvas {
   font-family: 'Karla', sans-serif;
+  color: #485063;
 }
 
 .wrap {
@@ -14,7 +15,15 @@ body, html {
   height: 100%;
   margin: 0 auto;
   padding: 0 10%;
-  max-width: 1100px;
+  max-width: 1200px;
+}
+
+.wrap-articles {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10%;
+  max-width: 1900px;
 }
 
 a.menu-options {
@@ -86,7 +95,7 @@ NAV
   content: '';
   transition: all 0.35s ease;
   /*Transition color*/
-  background-color: #1779ba;
+  background-color: #2f545e;
   width: 0;
 }
 
@@ -103,7 +112,7 @@ NAV
 .menu-hover-lines a:hover,
 .menu-hover-lines li.active > a {
   /* Text color when hovering*/
-  color: #0a0a0a;
+  color: #2f545e;
   transition: all 0.35s ease;
 }
 
@@ -121,12 +130,18 @@ NAV
 NAV MOBILE
 - - - - - - - - - - - - - - - - - - - - - - -  */
 .title-bar {
-  background-color: #222;
+  background-color: white;
   height: 60px;
+  color: rgba(10, 10, 10, 0.5);
+  border-bottom: 1px solid #dcdcdc;;
+}
+
+.menu-icon {
+
 }
 
 #mobile-menu {
-  background-color: #222;
+  background-color: #dcdcdc;
   padding: 10px;
 }
 
@@ -135,7 +150,7 @@ NAV MOBILE
 }
 
 #mobile-menu a {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(10, 10, 10, 0.5);
   font-weight: bold;
   line-height: 2;
 }
@@ -151,33 +166,37 @@ NAV MOBILE
 
 
 
+
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+TITLE
+- - - - - - - - - - - - - - - - - - - - - - -  */
+.fullname {
+  padding: 60px 0 30px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - - - - - - 
 HERO
 - - - - - - - - - - - - - - - - - - - - - - -  */
 .hero {
   padding-right: 50%;
   padding-top: 150px;
-  background-image: url("background.png");
+  background-image: url("webBack.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
-  background-color: #464646;
+  background-color: #dae9ed;
   min-height: 91.5vh;
-}
-
-.hero-words {
-  font-family: 'Cutive Mono', monospace;
-  font-size: 1.3em;
-  font-weight: 600;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 0 0 100px 100px white;
-  padding: 8px 8px;
-}
-
-.hero-text-section {
-  padding: 0 10%;
 }
 
 
@@ -187,25 +206,158 @@ HERO
 MAIN
 - - - - - - - - - - - - - - - - - - - - - - -  */
 /* About */
-.about, .projects {
+.main {
+  font-size: 1.4em;
+}
+
+.about, {
   padding-top: 12%;
 }
 
 .about-title {
   text-align: center;
+  padding-top: 10%;
 }
 
-.projects-title {
-  text-align: center;
-}
+
+
+
 
 .linkedin, .github, .email{
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .logos {
-  text-align: center;
+  font-size: 10px; 
+  /* Gaving alignment issues; did an ugly fix with a tranform */
+  transform: translate(0%, 8%);
 }
+
+
+
+/* Articles */
+.article-cell {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: left;
+      -ms-flex-align: left;
+          align-items: left;
+  background-color: white;
+  padding: 1rem 20px;
+}
+
+.article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 220%;
+  line-height: 110%;
+  color: black;
+}
+
+.article-title:hover {
+  color: #4c4f52;
+}
+
+.publish-date {
+  font-size: 80%;
+  color: #777777;
+  padding-bottom: 20px;
+}
+
+.article-beginning p {
+  line-height: 135%;
+}
+
+.cont-reading-button {
+  padding-top: 20px;
+}
+
+.cont-reading-button-extra {
+  background-color: black;
+}
+
+.cont-reading-button-extra:hover {
+  background-color: #4c4f52;
+}
+
+.article-body p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+
+
+/* Single Article Page */
+.single-article-cell {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: left;
+      -ms-flex-align: left;
+          align-items: left;
+  background-color: white;
+}
+
+.article-thumbnail {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.article-body-thumbnail {
+  width: 100%;
+}
+
+.article-photo-caption {
+  font-size: 70%;
+  padding-bottom: 20px;
+}
+
+.prev-post-label, .next-post-label {
+  font-size: 80%;
+  color: #777777;
+}
+
+.bottom-of-article {
+  padding-top: 40px;
+}
+
+.read-last {
+  text-align: left;
+}
+
+.read-next {
+  text-align: right;
+}
+
+.next-post-link, .last-post-link {
+  color: black;
+}
+
+.next-post-link:hover, .last-post-link:hover {
+  color: #4c4f52;
+}
+
+.single-article-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 300%;
+  text-align: center;
+  line-height: 110%;
+  color: black;
+}
+
+.single-publish-date {
+  font-size: 80%;
+  color: #777777;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
 
 /* Portfolio CSS (from Foundation website) */
 
@@ -277,13 +429,50 @@ MAIN
 }
 
 
+/* - - - - - - - - - - - - - - - - - - - - - - - 
+PROJECTS
+- - - - - - - - - - - - - - - - - - - - - - -  */
+.projects {
+  padding-top: 0px;
+}
 
+.nba-proj {
+  padding-top: 50px;
+}
+
+.projects-title {
+  text-align: center;
+}
+
+.proj-list {
+  padding-left: 10%;
+}
+
+.project-section {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.project-section p {
+  text-align: left;
+}
+
+.project-section img {
+  padding: 20px 0 40px 0;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - 
 FOOTER
 - - - - - - - - - - - - - - - - - - - - - - -  */
 footer {
-  padding: 70px;
+  margin-top: 150px;
+  width: 100%;
+  background-color: #F5F5F5;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  border-top: 1px solid #dcdcdc;
 }
 
 .connect-title {
@@ -298,7 +487,11 @@ MOBILE
 - - - - - - - - - - - - - - - - - - - - - - -  */
 @media only screen and (max-width: 639px) {
   .hero {
-    background-image: url(background-mobile.png);
+    background-image: url(mobileBack.png);
+  }
+
+  .fullname {
+    width: 75%;
   }
 
   footer {
@@ -308,6 +501,12 @@ MOBILE
   .hero {
     padding: 60px 158px 20px 20px;
   }
+
+  .prev-post-label, .next-post-label {
+    font-size: 60%;
+  }
+
+  .next-post-link, .last-post-link {
+    font-size: 80%;
+  }
 }
-
-

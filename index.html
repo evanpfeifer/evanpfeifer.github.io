@@ -5,12 +5,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Evan Pfeifer</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
 
     <!-- Link to Foundation CSS and CSS override (app.css) -->
     <link rel="stylesheet" href="css/foundation.css">
@@ -20,9 +21,9 @@
     <div class="off-canvas-wrapper">
       <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
         <ul class="vertical menu" data-magellan>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Connect">Connect</a></li>
+          <li><a href="http://evanpfeifer.com">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
         </ul>
       </div>
 
@@ -35,8 +36,8 @@
           <button class="menu-icon" type="button" data-open="mobile-menu"></button>
           <span class="title-bar-title">MENU</span>
         </div>
-        <a href="http://evanpfeifer.com"><span class-="title-bar-right" style="vertical-align: middle; font-weight: bold; padding-right: 10px;">EVAN PFEIFER</span></a>
       </div>
+  	</div>
 
 
 
@@ -46,13 +47,17 @@
         <div class="top-bar">
           <div class="wrap">
             <div class="top-bar-left">
-              <a href="http://evanpfeifer.com"><h3 class="menu-text">Evan Pfeifer</h3></a>
+              <ul class="menu menu-hover-lines" data-magellan>
+                <li><a class="menu-options" href="http://evanpfeifer.com">Home</a></li>
+                <li><a class="menu-options" href="projects.html">Projects</a></li>
+                <li><a class="menu-options" href="articles.html">Articles</a></li>
+              </ul>
             </div>
             <div class="top-bar-right">
-              <ul class="menu menu-hover-lines" data-magellan>
-                <li><a class="menu-options" href="#About">About</a></li>
-                <li><a class="menu-options" href="#Projects">Projects</a></li>
-                <li><a class="menu-options" href="#Connect">Connect</a></li>
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
               </ul>
             </div>
           </div>
@@ -66,9 +71,6 @@
 <!-- *********************** HERO SECTION *********************** -->
     <section class="hero">
       <div class="wrap">
-        <div class="hero-text-section">
-          <h5 class="hero-words">Data science and economics student interested in the application of innovative data-driven solutions and next-generation computing technologies.</h5>
-        </div>
       </div>
     </section>
 
@@ -80,17 +82,15 @@
 <!-- *********************** MAIN SECTION *********************** -->
 
     <section class="main" id="main">
-      <!-- About -->
+      <!-- My Approach to Life -->
       <div class="about" id="About">
         <div class="wrap grid-x">
           <div class="cell">
             <div class="about-title">
-              <h1 style="font-family: 'Karla', sans-serif;">About Me</h1>
+              <h1 style="font-family: 'Karla', sans-serif;">My Approach to Life</h1>
             </div>
             <hr>
-            <p>Apart from being a 70s rock music connoisseur, breakfast cereal savant, and undeniable golf addict,
-               I am an undergraduate data science and economics student at UC Berkeley. Beyond my aforementioned
-               passions, three driving factors steer my life:</p>
+            <p>Apart from being a 70s rock music connoisseur, breakfast cereal savant, and undeniable golf addict, I'm an undergraduate data science and economics student at UC Berkeley. Beyond my aforementioned passions, three driving factors steer my life:</p>
             <ul>
               <li><strong>I love being curious. </strong>Coming from a place of openness and genuine interest
                 builds my inquisitiveness, whether it be about algorithm run time or behavioral economic theory.
@@ -110,125 +110,25 @@
         </div>
       </div>
 
-
-      <!-- Projects -->
-      <div class="projects" id="Projects">
+      <!-- What I'm Up To -->
+      <div class="about" id="About">
         <div class="wrap grid-x">
           <div class="cell">
-            <div class="projects-title">
-              <h1 style="font-family: 'Karla', sans-serif;">Projects</h1>
+            <div class="about-title">
+              <h1 style="font-family: 'Karla', sans-serif;">What I'm Up To</h1>
             </div>
             <hr>
+            <p>I’m currently a sophomore at UC Berkeley, pursuing a double major in data science and economics. Right now, I’m studying topics like data modeling, microeconomic analysis, and data structures. Since last January, I’ve been involved with the Data 8 course (Foundations of Data Science) as an Academic Intern. I assist a laboratory class of roughly 25 students, helping students achieve mastery in the course’s programming and statistics concepts. I’ve also gotten involved with campus clubs like the Data Science Society, where I worked on a <a href="projects.html#nba-proj">machine learning project</a> with NBA data.</p>
+            <p>This past summer, I worked on <a href="https://www.vermilionenergy.com">Vermilion Energy's</a> Business Development team as their first Computer Science Intern. At Vermilion, I worked on a project involving the development of an analytics tool for oil reserves data. I learned about the fundamentals of the oil industry and corporate development, and got to apply my skills in computer science to real data.</p>
+            <p>I’ve also spent some time on side projects to level up my coding and inferential thinking skills and seek answers to my questions about the world. Feel free to take a look at them <a href="projects.html">here</a>. I’ve also started collecting some of my thoughts and experiences in writing. While many of these articles have little to do with computers or economics, if you want to dive even deeper into my brain and see what I do in my spare time, you can read them <a href="articles.html">here</a>.</p>
+            <p>I consider myself lucky to have had the chance to learn from world-class researchers and be exposed to so many brilliant individuals so early in my learning journey. I’m always interested in opportunities to pay it forward or exercise my passion for economics and computing.</p>
           </div>
-
-
-          <div class="cell small-12 large-6">
-            <header class="portfolio-hero-header">
-              <img class="portfolio-hero-header-logo" src="titanic.png"/>
-              <h2 class="portfolio-hero-header-h2 text-center" style="font-family: 'Karla', sans-serif;">Titanic Survival</h2>
-
-              <div class="portfolio-info">
-                <ul class="portfolio-hero-header-description">
-                  <p>Employed binary classification and rudimentary machine learning techniques
-                   to create a model to predict survival of passengers on the RMS Titanic.</p>
-                </ul>
-                <ul class="portfolio-hero-header-menu">
-                  <li><a class="button primary" href="https://github.com/evanpfeifer/titanic-prediction">Github</a></li>
-                </ul>
-              </div>
-            </header>
-          </div>
-
-
-          <div class="cell small-12 large-6">
-            <header class="portfolio-hero-header">
-              <img class="portfolio-hero-header-logo" src="foundation.png"/>
-              <h2 class="portfolio-hero-header-h2 text-center" style="font-family: 'Karla', sans-serif;">Foundation Template</h2>
-
-              <div class="portfolio-info">
-                <ul class="portfolio-hero-header-description">
-                  <p>Created a website template using the Zurb Foundation 6 framework for responsive 
-                  design, optimizing for mobile and desktop devices and maximizing user interface usability.</p>
-                </ul>
-                <ul class="portfolio-hero-header-menu">
-                  <li><a class="button primary" href="https://github.com/evanpfeifer/foundation-site-template">Github</a></li>
-                </ul>
-              </div>
-            </header>
-          </div>
-
-
-          <div class="cell small-12 large-6">
-            <header class="portfolio-hero-header">
-              <img class="portfolio-hero-header-logo" src="pdf.png"/>
-              <h2 class="portfolio-hero-header-h2 text-center" style="font-family: 'Karla', sans-serif;">PDF Merger/Splitter</h2>
-
-              <div class="portfolio-info">
-                <ul class="portfolio-hero-header-description">
-                  <p>Made a program in Python that merges or splits PDF documents, and then developed a GUI using Tkinter for easier use.</p>
-                </ul>
-                <ul class="portfolio-hero-header-menu">
-                  <li><a class="button primary" href="https://github.com/evanpfeifer/pdf-modifier">Github</a></li>
-                </ul>
-              </div>
-            </header>
-          </div>
-
-
-          <div class="cell small-12 large-6">
-            <header class="portfolio-hero-header">
-              <img class="portfolio-hero-header-logo" src="tiger.png"/>
-              <h2 class="portfolio-hero-header-h2 text-center" style="font-family: 'Karla', sans-serif;">PGA Tour EDA</h2>
-
-              <div class="portfolio-info">
-                <ul class="portfolio-hero-header-description">
-                  <p>Performed exploratory data analyses using PGA Tour data to determine what aspects of a player's game have the largest impact on player season earnings.</p>
-                </ul>
-                <ul class="portfolio-hero-header-menu">
-                  <li><a class="button primary" href="https://github.com/evanpfeifer/pga-tour-eda">Github</a></li>
-                </ul>
-              </div>
-            </header>
-          </div>
-
-
-          <div class="cell small-12 large-6">
-            <header class="portfolio-hero-header">
-              <img class="portfolio-hero-header-logo" src="nba.png"/>
-              <h2 class="portfolio-hero-header-h2 text-center" style="font-family: 'Karla', sans-serif;">NBA Player Prediction</h2>
-
-              <div class="portfolio-info">
-                <ul class="portfolio-hero-header-description">
-                  <p>Developed a machine learning regression model alongside three other Berkeley DSS members to predict NBA players’ average PPG, deploying hyperparameter tuning and cross validation techniques.</p>
-                </ul>
-                <ul class="portfolio-hero-header-menu">
-                  <li><a class="button primary" href="https://github.com/evanpfeifer/nba-player-data">Github</a></li>
-                </ul>
-              </div>
-            </header>
-          </div>
-
-
-
         </div>
       </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <div class="wrap" id="Connect">
-        <div class="connect-title">
-          <h1 style="font-family: 'Karla', sans-serif;">Connect</h1>
-          <hr>
-        </div>
-
-        <div class="logos">
-          <a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/"><i class="fab fa-linkedin fa-4x"></i></a>
-          <a class="github" href="https://github.com/evanpfeifer"><i class="fab fa-github fa-4x"></i></a>
-          <a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a>
-        </div>
-      </div>
     </footer>
 
 
