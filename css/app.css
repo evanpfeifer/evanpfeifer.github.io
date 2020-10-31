@@ -131,7 +131,7 @@ NAV MOBILE
 - - - - - - - - - - - - - - - - - - - - - - -  */
 .title-bar {
   background-color: white;
-  height: 60px;
+  height: 80px;
   color: rgba(10, 10, 10, 0.5);
   border-bottom: 1px solid #dcdcdc;;
 }
@@ -508,5 +508,15 @@ MOBILE
 
   .next-post-link, .last-post-link {
     font-size: 80%;
+  }
+
+  .top-bar-right-mobile {
+    float: right;
+    padding-bottom: 6px;
+  }
+
+  .mobile-menu-button {
+    float: left;
+    padding-top: 20px;
   }
 }
