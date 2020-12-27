@@ -461,6 +461,11 @@ PROJECTS
   padding: 20px 0 40px 0;
 }
 
+.proj-bullets {
+  text-align: left;
+  padding-left: 10%;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - 
 FOOTER
 - - - - - - - - - - - - - - - - - - - - - - -  */

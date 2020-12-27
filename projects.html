@@ -21,7 +21,7 @@
     <div class="off-canvas-wrapper">
       <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
         <ul class="vertical menu" data-magellan>
-          <li><a href="http://evanpfeifer.com">Home</a></li>
+          <li><a href="https://evanpfeifer.github.io">Home</a></li>
           <li><a href="projects">Projects</a></li>
           <li><a href="articles">Articles</a></li>
         </ul>
@@ -57,7 +57,7 @@
           <div class="wrap">
             <div class="top-bar-left">
               <ul class="menu menu-hover-lines" data-magellan>
-                <li><a class="menu-options" href="http://evanpfeifer.com">Home</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
                 <li><a class="menu-options" href="projects">Projects</a></li>
                 <li><a class="menu-options" href="articles">Articles</a></li>
               </ul>
@@ -77,7 +77,7 @@
 <!-- *********************** NAME SECTION *********************** -->
     <section>
       <div class="wrap">
-        <a href="http://evanpfeifer.com">
+        <a href="https://evanpfeifer.github.io">
           <img src="name.png" class="fullname">
         </a>
       </div>
@@ -99,6 +99,10 @@
             what I've done and hear what I've learned, either continue scrolling or 
             click one of the links below to go straight to a particular project.</p>
             <ul class="proj-list" data-magellan>
+              <!-- <li><a href="#swingpro-proj">SwingPro: A.I. powered golf swing analyzer</a></li> -->
+              <li><a href="#byow-proj">Nutstradamus: The Game</a></li>
+              <!-- <li><a href="#data-club-proj">Webber Academy Big Data Club</a></li> -->
+              <li><a href="#spam-proj">Spam or Ham</a></li>
               <li><a href="#nba-proj">NBA Player PPG Prediction</a></li>
               <li><a href="#pga-proj">PGA Tour EDA</a></li>
               <li><a href="#pdf-proj">PDF Merger/Splitter</a></li>
@@ -106,6 +110,70 @@
               <li><a href="#foundation-proj">Foundation Web Template</a></li>
             </ul>
           </div>
+
+          <div class="cell byow-proj project-section" id="byow-proj">
+            <hr>
+            <h2 style="font-family: 'Karla', sans-serif;">Nutstradamus: The Game</h2>
+            <img class="portfolio-hero-header-logo" src="projectImages/arcade.png"/>
+            <p>For the capstone project in CS 61B at UC Berkeley, my friend <a href="https://github.com/jasondiwa" target="_blank">Jason Diwa</a> and I built a tile-based arcade game in Java. While we were provided with the tile-rendering engine, every other aspect of the design and implementation was left completely up to us.</p>
+            <img src="projectImages/nutstradamus.png"/>
+            <p>In the game, you play as Nutstradamus, a prophetic squirrel who seeks enlightenment and eternal salvation through collecting acorns. However, you are challenged by dogs who follow you in hot pursuit. If the dogs catch you before you have collected every acorn, you lose the game.</p>
+            <img src="projectImages/byow.png"/>
+            <p>The world map is pseudo-randomly generated, and the user inputs a seed to the game that is used in world-generation so the same world can be revisited. The first step in our algorithm is to randomly partition the entire field into rectangular sections like so:</p>
+            <img src="projectImages/partitions.png" width="300" height="300"/>
+            <p>Then, we randomly choose a portion of these partitions to be "rooms," and create random hallways until everything is connected. Once the map is created, the location of the squirrel, dogs, and acorns are randomly chosen.</p>
+            <p>The dogs continually chase you throughout the game, and are powered by the A* algorithm. We were able to repurpose code from another project in CS 61B that involved implementing A*. We elected the Manhattan distance hueristic for use in A*, as the player only has options to move up, down, left, and right.</p>
+            <p>Additional feautures that we added include save/load capabilities to return to the same game state later, the ability to toggle sight of the paths the dogs will take to get to you, and a heads-up display that shows information about each tile when the cursor is hovered over it.</p>
+            <p>While I had already been exposed to Git before this project, physically working off of the same code with another person was a new challenge. Working on separate branches and resolving merge conflicts was essentially new to me, and I learned lots about Git and general best practices in version control.</p>
+            <p>The design and implementation problems we faced were extremely challenging. Besides the fact that we spent over 40 hours on this project, we rewrote or scrapped hundreds of lines of code and had to battle the inevitably increasing complexity of our project. While each individual problem can be challenging on its own, we had to also think about finding a solution that elegantly fit in with the rest of the project. Given our time constrictions (we had just over two weeks to complete the project), I am very proud of our final product, and know that my skills in designing software have greatly improved.</p>
+            <p><strong>Skills & tools:</strong> Managing complexity, Java, Git, UI design</p>
+          </div>
+
+          <div class="cell spam-proj project-section" id="spam-proj">
+            <hr>
+            <h2 style="font-family: 'Karla', sans-serif;">Spam or Ham</h2>
+            <img class="portfolio-hero-header-logo" src="projectImages/spam.png"/>
+            <p>In this project for DATA 100 at UC Berkeley, I created a logistic regression classifier that can distinguish spam (junk or commercial or bulk) emails from ham (non-spam) emails. The project was originally done in Python through a Jupyter Notebook. Scikit-learn was utilized for machine learning, Natural Language Toolkit (NLTK) for analyzing text data, and Seaborn/Matplotlib for visualizations.</p>
+            <p>This project involved exploratory data analysis to better understand the data, followed by feature selection and engineering for the model. The main features used in my model were distinctive words from results of NLTK analysis.</p>
+            <p>I used various visuals, ranging from the common (bar graph, density plots), to the unqiue (heat maps, ROC curve) to convey my findings and display model efficacy. The ROC curve is shown below, and the ROC area-under-curve (AUC) score is 0.9987. This means that 99.87% of the time, the model is more likely to classify a spam email as ham than a ham email as spam. In this context, favoring false positives over false negatives is desired.</p>
+            <img src="projectImages/roc.png" width="600"/>
+            <p>My final model had a training accuracy of 98.7%, 5-fold cross validation accuracy of 97.8%, and a test accuracy of 97.4%. I thought these results were quite good, especially given that the project was limited to logistic regression.</p>
+            <p>As the project is still in use for Data 100, the code and Jupyter Notebook cannot be shared publicly. However, I have transcibed essential information and all of the relevant visuals to LaTeX form, which can be seen <a href="https://github.com/evanpfeifer/spam-or-ham" target="_blank">here</a>.</p>
+            <p><strong>Skills & tools:</strong> Logistic regression, Python, Natural Language Toolkit (NLTK)</p>
+          </div>
+
+          <!-- ************************** -->
+          <!-- **** NOT FINISHED YET **** -->
+          <!-- ************************** -->
+
+          <!-- <div class="cell swingpro-proj project-section" id="swingpro-proj">
+            <hr>
+            <h2 style="font-family: 'Karla', sans-serif;">SwingPro: A.I. powered golf swing analyzer</h2>
+            <img class="portfolio-hero-header-logo" src="projectImages/tiger.png"/>
+            <p>In my most ambitious project yet, I built a model that tells you what PGA Tour professional your golf swing most closely resembles.</p>
+            <p>The model utilizes a cutting-edge convolutional neural network from <a href="https://arxiv.org/abs/1705.07750" target="_blank">researchers at Google</a>. In particular, the model uses RGB data (i.e. videos) as input. Academic literature suggests that RBG models have better performace than models that use 2-dimensional joint data. Training data was scraped from Youtube and <a href="https://arxiv.org/abs/1903.06528" target="_blank">GolfDB</a>, with preprocessing done mainly through Google's open source methods.</p>
+            <p>The model's accuracy was determined through testing how well it can identify unseen videos of the same PGA Tour players that it was trained on. These tests gave a XX% accuracy rate.</p>
+            <p>To see the codebase of the project, check out <a href="https://github.com/evanpfeifer/SwingPro" target="_blank">this</a> Github repository.</p>
+            <p>I have many goals for the future of the project. I am currently developing the project into an iOS app using Swift, and hope to add aditional functionalities, most notably swing analysis through adding joint-tracking lines (utilizing CMU's OpenPose).</p>
+            <p><strong>Skills & tools:</strong> Computer vision, machine learning, Swift, iOS development</p>
+          </div> -->
+
+          <!-- ************************** -->
+          <!-- **** NOT FINISHED YET **** -->
+          <!-- ************************** -->
+
+          <!-- <div class="cell data-club-proj project-section" id="data-club-proj">
+            <hr>
+            <h2 style="font-family: 'Karla', sans-serif;">Webber Academy Big Data Club</h2>
+            <img class="portfolio-hero-header-logo" src="projectImages/webber.png"/>
+            <p>I graduated from Webber Academy in 2019, and am staying involved in the community through collaboration with the new Big Data Club for high school students. As someone who was not exposed to computing and data science topics before university, I hope to help make the Big Data Club a resource for students to build data literacy skills earlier on.</p>
+            <p>I am currently building interactive Jupyter notebooks and instructional videos on various topics in data science. To see the notebooks, check out <a href="https://github.com/evanpfeifer" target="_blank">this</a> Github repo. Feel free to take a look at some of the videos below:</p>
+            	<ul class=proj-bullets>
+            		<li><a href="https://youtube.com" target="_blank">Classification and KNN</a></li>
+            	</ul>
+            <p>Furthermore, particularly motivated students are partaking in the STEM Fellowship <a href="https://stemfellowship.org/2020-21-hsbdc/" target="_blank">Big Data Challenge,</a> and I am available to help students with the data processing, visualization, and modeling aspects of their projects.</p>
+            <p><strong>Skills & tools:</strong> Pedagogy, public speaking, rudimentary statistics & data science</p>
+          </div> -->
 
           <div class="cell nba-proj project-section" id="nba-proj">
             <hr>
