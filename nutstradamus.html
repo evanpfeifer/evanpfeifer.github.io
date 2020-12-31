@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f4b1497183.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nutstradamus - Evan Pfeifer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to Foundation CSS and CSS override (app.css) -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+        <ul class="vertical menu" data-magellan>
+          <li><a href="https://evanpfeifer.github.io">Home</a></li>
+          <li><a href="https://evanpfeifer.github.io/projects">Projects</a></li>
+          <li><a href="https://evanpfeifer.github.io/articles">Articles</a></li>
+        </ul>
+      </div>
+
+
+
+<!-- *********************** MOBILE NAVIGATION *********************** -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="title-bar-left">
+          <div class="mobile-menu-button">
+            <button class="menu-icon" type="button" data-open="mobile-menu"></button>
+            <span class="title-bar-title">MENU</span>
+          </div>
+            <div class="top-bar-right-mobile">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- *********************** DESKTOP NAVIGATION *********************** -->
+    <nav class="top-bar-container hide-for-small-only" data-sticky-container>
+      <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="wrap">
+            <div class="top-bar-left">
+              <ul class="menu menu-hover-lines" data-magellan>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/projects">Projects</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/articles">Articles</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- *********************** NAME SECTION *********************** -->
+    <section>
+      <div class="wrap">
+        <a href="https://evanpfeifer.github.io">
+          <img src="name.png" class="fullname">
+        </a>
+      </div>
+    </section>
+
+
+<!-- *********************** MAIN SECTION *********************** -->
+
+    <section class="main" id="main">
+      <!-- Main Article -->
+      <div class="articles" id="Articles">
+        <div class="wrap grid-x">
+          <div class="cell">
+            <header class="single-article-cell">
+              <div class="single-article">
+                <img class="article-thumbnail" src="projectImages/arcade.png">
+                <h2 class="single-article-title">Arcade Game: Nutstradamus</h2>
+
+                <div class="single-publish-date">
+                  <p>NOV - DEC 2020</p>
+                </div>
+
+                <div class="article-body">
+                  <p>For the capstone project in CS 61B at UC Berkeley, my friend <a href="https://github.com/jasondiwa" target="_blank">Jason Diwa</a> and I built a tile-based arcade game in Java. While we were provided with the tile-rendering engine, every other aspect of the design and implementation was left completely up to us.</p>
+                  <img src="projectImages/nutstradamus.png"/>
+                  <p>In the game, you play as Nutstradamus, a prophetic squirrel who seeks enlightenment and eternal salvation through collecting acorns. However, you are challenged by dogs who follow you in hot pursuit. If the dogs catch you before you have collected every acorn, you lose the game.</p>
+                  <img src="projectImages/byow.png"/>
+                  <p>The world map is pseudo-randomly generated, and the user inputs a seed to the game that is used in world-generation so the same world can be revisited. The first step in our algorithm is to randomly partition the entire field into rectangular sections like so:</p>
+                  <img src="projectImages/partitions.png" class="partitionsImage" width="300" height="300"/>
+                  <p>Then, we randomly choose a portion of these partitions to be "rooms," and create random hallways until everything is connected. Once the map is created, the location of the squirrel, dogs, and acorns are randomly chosen.</p>
+                  <p>The dogs continually chase you throughout the game, and are powered by the A* algorithm. We were able to repurpose code from another project in CS 61B that involved implementing A*. We elected the Manhattan distance hueristic for use in A*, as the player only has options to move up, down, left, and right.</p>
+                  <p>Additional feautures that we added include save/load capabilities to return to the same game state later, the ability to toggle sight of the paths the dogs will take to get to you, and a heads-up display that shows information about each tile when the cursor is hovered over it.</p>
+                  <p>While I had already been exposed to Git before this project, physically working off of the same code with another person was a new challenge. Working on separate branches and resolving merge conflicts was essentially new to me, and I learned lots about Git and general best practices in version control.</p>
+                  <p>The design and implementation problems we faced were extremely challenging. Besides the fact that we spent over 40 hours on this project, we rewrote or scrapped hundreds of lines of code and had to battle the inevitably increasing complexity of our project. While each individual problem can be challenging on its own, we had to also think about finding a solution that elegantly fit in with the rest of the project. Given our time constrictions (we had just over two weeks to complete the project), I am very proud of our final product, and know that my skills in designing software have greatly improved.</p>
+                  <p><strong>Skills & tools:</strong> Managing complexity, Java, Git, UI design</p>
+                </div>
+
+              </div>
+            </header>
+          </div>
+
+          <div class="cell bottom-of-article">
+            <hr>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-last">
+              <div class="prev-post-label">
+                <p>PREVIOUS PROJECT</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/spamHam" class="last-post-link">Spam or Ham?</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-next">
+              <div class="next-post-label">
+                <p>NEXT PROJECT</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/projects/nflProj" class="next-post-link">NFL Big Data Bowl 2021</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+
+
+    </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

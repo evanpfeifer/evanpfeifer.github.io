@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f4b1497183.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects - Evan Pfeifer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to Foundation CSS and CSS override (app.css) -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+        <ul class="vertical menu" data-magellan>
+          <li><a href="https://evanpfeifer.github.io">Home</a></li>
+          <li><a href="projects">Projects</a></li>
+          <li><a href="articles">Articles</a></li>
+        </ul>
+      </div>
+
+
+
+<!-- *********************** MOBILE NAVIGATION *********************** -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="title-bar-left">
+          <div class="mobile-menu-button">
+            <button class="menu-icon" type="button" data-open="mobile-menu"></button>
+            <span class="title-bar-title">MENU</span>
+          </div>
+            <div class="top-bar-right-mobile">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- *********************** DESKTOP NAVIGATION *********************** -->
+    <nav class="top-bar-container hide-for-small-only" data-sticky-container>
+      <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="wrap-articles">
+            <div class="top-bar-left">
+              <ul class="menu menu-hover-lines" data-magellan>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
+                <li><a class="menu-options" href="projects">Projects</a></li>
+                <li><a class="menu-options" href="articles">Articles</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- *********************** NAME SECTION *********************** -->
+    <section>
+      <div class="wrap">
+        <a href="https://evanpfeifer.github.io">
+          <img src="name.png" class="fullname">
+        </a>
+      </div>
+    </section>
+
+
+<!-- *********************** MAIN SECTION *********************** -->
+
+    <section class="main" id="main">
+      <!-- My Approach to Life -->
+      <div class="projects" id="Articles">
+        <div class="wrap-articles grid-x">
+          
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/nflProj">
+                  <img class="proj-thumbnail" src="projectImages/nfl.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nflProj" class="proj-title">NFL Big Data Bowl 2021</a>
+
+                <div class="publish-date">
+                  <p>NOV 2020 - JAN 2021</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>For this years rendition of their annual analytics competition, the NFL asked contestants to uncover what makes a successful defense against passing plays. We suggest a custom-built clustering algorithm for NFL football plays, and provide a subsequent analysis of defensive play efficacy.</p>
+                  <p><strong>Skills & tools:</strong> Python, clustering, algorithm design, data cleaning/processing</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nflProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/nutstradamus">
+                  <img class="proj-thumbnail" src="projectImages/arcade.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nutstradamus" class="proj-title">Arcade Game: Nutstradamus</a>
+
+                <div class="publish-date">
+                  <p>NOV - DEC 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>In this capstone project for CS 61B (Data Structures & Algorithms) at UC Berkeley, my friend Jason Diwa and I built a tile-based game in Java. The game is complete with a custom algorithm to pseudo-randomly generate the playing field and an AI equipped with the A* algorithm to attempt to beat the human player.</p>
+                  <p><strong>Skills & tools:</strong> Managing complexity, Java, Git, UI design</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nutstradamus" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/spamHam">
+                  <img class="proj-thumbnail" src="projectImages/spam.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/spamHam" class="proj-title">Spam or Ham?</a>
+
+                <div class="publish-date">
+                  <p>NOV 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>The final project for DATA 100 (Principles & Techniques of Data Science) at UC Berkeley involved building a logistic regression model in Python to predict whether an email should go to the user's inbox or spam folder. I deployed natural language processing tools for feature engineering and cross validation to optimize model performance. My final model had over 97% accuracy.</p>
+                  <p><strong>Skills & tools:</strong> Logistic regression, Python, Natural Language Toolkit (NLTK)</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/spamHam" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/nbaProj">
+                  <img class="proj-thumbnail" src="projectImages/nba.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nbaProj" class="proj-title">NBA PPG Prediction</a>
+
+                <div class="publish-date">
+                  <p>FEB - MAY 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>As a project for the Berkeley Data Science Society, three other members and I built and presented a model to predict NBA players’ average points per game (PPG) scored. We deployed hyperparameter tuning and cross validation techniques, and achieved an average error of under 2 points per game.</p>
+                  <p><strong>Skills & tools:</strong> Python, feature engineering, hyperparameter tuning</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nbaProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/pgaProj">
+                  <img class="proj-thumbnail" src="projectImages/tiger.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/pgaProj" class="proj-title">PGA Tour EDA</a>
+
+                <div class="publish-date">
+                  <p>OCT - DEC 2019</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>I performed exploratory data analysis (EDA) on PGA Tour data from 2017 to determine what aspects of a player's game have the largest impact on player season earnings.</p>
+                  <p><strong>Skills & tools:</strong> Python, data processing, feature creation, data visualization</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/pgaProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/pdfProj">
+                  <img class="proj-thumbnail" src="projectImages/pdf.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/pdfProj" class="proj-title">PDF Merger/Splitter</a>
+
+                <div class="publish-date">
+                  <p>DEC 2019 - JAN 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>I used the PyPDF2 library to assist with the actual splitting/merging of PDF documents, then created a GUI for easier use using Tkinter.</p>
+                  <p><strong>Skills & tools:</strong> Python, object-oriented programming, GUIs</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/pdfProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/titanicProj">
+                  <img class="proj-thumbnail" src="projectImages/titanic.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/titanicProj" class="proj-title">Titanic Survival Prediction</a>
+
+                <div class="publish-date">
+                  <p>AUG - OCT 2019</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>For my first data science project, I elected to work off of the Titanic dataset from the popular Kaggle competition. I employed binary classification and rudimentary machine learning techniques to create a model to predict survival of passengers on the RMS Titanic.</p>
+                  <p><strong>Skills & tools:</strong> Python, data cleaning, machine learning</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/titanicProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/foundationProj">
+                  <img class="proj-thumbnail" src="projectImages/foundation.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/foundationProj" class="proj-title">Foundation Website Template</a>
+
+                <div class="publish-date">
+                  <p>MAY - JUNE 2019</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>Everyone starts somewhere, and I more or less started here. This project involved using Zurb's Foundation framework for responsive design to create a generic website template. This was my first major coding project, and introduced me to concepts like web design, UI/UX, and project workflow. The template incorporates responsive design, and is optimized for mobile.</p>
+                  <p><strong>Skills & tools:</strong> HTML5, CSS, javascript, Foundation</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/foundationProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+
+
+    </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f4b1497183.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spam or Ham? - Evan Pfeifer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to Foundation CSS and CSS override (app.css) -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+        <ul class="vertical menu" data-magellan>
+          <li><a href="https://evanpfeifer.github.io">Home</a></li>
+          <li><a href="https://evanpfeifer.github.io/projects">Projects</a></li>
+          <li><a href="https://evanpfeifer.github.io/articles">Articles</a></li>
+        </ul>
+      </div>
+
+
+
+<!-- *********************** MOBILE NAVIGATION *********************** -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="title-bar-left">
+          <div class="mobile-menu-button">
+            <button class="menu-icon" type="button" data-open="mobile-menu"></button>
+            <span class="title-bar-title">MENU</span>
+          </div>
+            <div class="top-bar-right-mobile">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- *********************** DESKTOP NAVIGATION *********************** -->
+    <nav class="top-bar-container hide-for-small-only" data-sticky-container>
+      <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="wrap">
+            <div class="top-bar-left">
+              <ul class="menu menu-hover-lines" data-magellan>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/projects">Projects</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/articles">Articles</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- *********************** NAME SECTION *********************** -->
+    <section>
+      <div class="wrap">
+        <a href="https://evanpfeifer.github.io">
+          <img src="name.png" class="fullname">
+        </a>
+      </div>
+    </section>
+
+
+<!-- *********************** MAIN SECTION *********************** -->
+
+    <section class="main" id="main">
+      <!-- Main Article -->
+      <div class="articles" id="Articles">
+        <div class="wrap grid-x">
+          <div class="cell">
+            <header class="single-article-cell">
+              <div class="single-article">
+                <img class="article-thumbnail" src="projectImages/spam.png">
+                <h2 class="single-article-title">Spam or Ham?</h2>
+
+                <div class="single-publish-date">
+                  <p>NOV - DEC 2020</p>
+                </div>
+
+                <div class="article-body">
+                  <p>In this project for DATA 100 at UC Berkeley, I created a logistic regression classifier that can distinguish spam (junk or commercial or bulk) emails from ham (non-spam) emails. The project was originally done in Python through a Jupyter Notebook. Scikit-learn was utilized for machine learning, Natural Language Toolkit (NLTK) for analyzing text data, and Seaborn/Matplotlib for visualizations.</p>
+                  <p>This project involved exploratory data analysis to better understand the data, followed by feature selection and engineering for the model. The main features used in my model were distinctive words from results of NLTK analysis.</p>
+                  <p>I used various visuals, ranging from the common (bar graph, density plots), to the unqiue (heat maps, ROC curve) to convey my findings and display model efficacy. The ROC curve is shown below, and the ROC area-under-curve (AUC) score is 0.9987. This means that 99.87% of the time, the model is more likely to classify a spam email as ham than a ham email as spam. In this context, favoring false positives over false negatives is desired.</p>
+                  <img src="projectImages/roc.png" class="rocCurveImage"/>
+                  <p>My final model had a training accuracy of 98.7%, 5-fold cross validation accuracy of 97.8%, and a test accuracy of 97.4%. I thought these results were quite good, especially given that the project was limited to logistic regression.</p>
+                  <p>As the project is still in use for Data 100, the code and Jupyter Notebook cannot be shared publicly. However, I have transcibed essential information and all of the relevant visuals to LaTeX form, which can be seen <a href="https://github.com/evanpfeifer/spam-or-ham" target="_blank">here</a>.</p>
+                  <p><strong>Skills & tools:</strong> Logistic regression, Python, Natural Language Toolkit (NLTK)</p>
+                </div>
+
+              </div>
+            </header>
+          </div>
+
+          <div class="cell bottom-of-article">
+            <hr>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-last">
+              <div class="prev-post-label">
+                <p>PREVIOUS PROJECT</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/nbaProj" class="last-post-link">NBA PPG Prediction</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-next">
+              <div class="next-post-label">
+                <p>NEXT PROJECT</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/projects/nutstradamus" class="next-post-link">Arcade Game: Nutstradamus</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+
+
+    </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

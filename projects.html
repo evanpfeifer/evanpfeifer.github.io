@@ -28,7 +28,6 @@
       </div>
 
 
-
 <!-- *********************** MOBILE NAVIGATION *********************** -->
     <div class="off-canvas-content" data-off-canvas-content>
       <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
@@ -58,8 +57,8 @@
             <div class="top-bar-left">
               <ul class="menu menu-hover-lines" data-magellan>
                 <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
-                <li><a class="menu-options" href="projects">Projects</a></li>
-                <li><a class="menu-options" href="articles">Articles</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/projects">Projects</a></li>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io/articles">Articles</a></li>
               </ul>
             </div>
             <div class="top-bar-right">
@@ -73,6 +72,8 @@
         </div>
       </div>
     </nav>
+
+
 
 <!-- *********************** NAME SECTION *********************** -->
     <section>
@@ -99,6 +100,9 @@
             what I've done and hear what I've learned, either continue scrolling or 
             click one of the links below to go straight to a particular project.</p>
             <ul class="proj-list" data-magellan>
+              <li><a href="#nfl-proj">NFL Big Data Bowl 2021</a>
+                <p>Custom clustering of NFL football plays to derive insights on defensive play efficacy.</p>
+              </li>
               <!-- <li><a href="#swingpro-proj">SwingPro: A.I. powered golf swing analyzer</a></li> -->
               <li><a href="#byow-proj">Nutstradamus: The Game</a></li>
               <!-- <li><a href="#data-club-proj">Webber Academy Big Data Club</a></li> -->
@@ -109,6 +113,17 @@
               <li><a href="#titanic-proj">Titanic Survival Prediction</a></li>
               <li><a href="#foundation-proj">Foundation Web Template</a></li>
             </ul>
+          </div>
+
+          <div class="cell nfl-proj project-section" id="nfl-proj">
+            <hr>
+            <h2 style="font-family: 'Karla', sans-serif;">NFL Big Data Bowl 2021</h2>
+            <img class="portfolio-hero-header-logo" src="projectImages/nfl.png" width="200px"/>
+            <p>The NFL captures real-time data for every player, on every play, in every situation — anywhere on the field. Each year, they hold an analytics competition to help draw insights from their plethora of positional data. This year, the NFL asked contestants to uncover what makes for a successful defense against passing plays.</p>
+            <p>My dad (John Pfeifer, who is also currently a computer science Ph.D student at the <a href="https://sydneyalgorithms.wordpress.com/people/" target="_blank">University of Sydney</a>) and I teamed up to bring forth a novel method to cluster football plays.</p>
+            <p>This project brought many challenges, many of which came from the formatting of the data and optimizing runtime of the algorithms to ensure they could run in a reasonable amount of time. Furthermore, this was my first project involving unsupervised learning.</p>
+            <p>We transformed positional data for each play into trajectories, and used Gonzalez clustering with dynamic time warp as our distance measure (rather than the typical Euclidean). Once plays were separated into clusters, we were then able to perform exploratory analytics to ascertain which defensive plays were most effective against certain offensive plays.</p>
+            <p><strong>Skills & tools:</strong> Python, clustering, algorithm design, data cleaning/processing</p>
           </div>
 
           <div class="cell byow-proj project-section" id="byow-proj">

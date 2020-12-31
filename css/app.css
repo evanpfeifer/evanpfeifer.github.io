@@ -359,6 +359,14 @@ MAIN
 }
 
 
+
+/* Project Section Floating Dropdown Menu */
+.project-dropdown-menu {
+  padding-top: 100px;
+  padding-left: 10px;
+}
+
+
 /* Portfolio CSS (from Foundation website) */
 
 .portfolio-hero-header {
@@ -465,6 +473,47 @@ PROJECTS
   text-align: left;
   padding-left: 10%;
 }
+
+.proj-thumbnail {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.proj-cell {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: left;
+      -ms-flex-align: left;
+          align-items: left;
+  background-color: white;
+  padding: 1rem 20px;
+}
+
+.proj-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 220%;
+  line-height: 110%;
+  color: black;
+}
+
+.proj-title:hover {
+  color: #4c4f52;
+}
+
+.partitionsImage, .rocCurveImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foundation-image {
+  border: 1px solid black;
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - 
 FOOTER
