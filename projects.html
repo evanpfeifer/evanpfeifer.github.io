@@ -28,6 +28,7 @@
       </div>
 
 
+
 <!-- *********************** MOBILE NAVIGATION *********************** -->
     <div class="off-canvas-content" data-off-canvas-content>
       <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
@@ -45,7 +46,7 @@
             </div>
         </div>
       </div>
-  	</div>
+    </div>
 
 
 
@@ -53,12 +54,12 @@
     <nav class="top-bar-container hide-for-small-only" data-sticky-container>
       <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
         <div class="top-bar">
-          <div class="wrap">
+          <div class="wrap-articles">
             <div class="top-bar-left">
               <ul class="menu menu-hover-lines" data-magellan>
                 <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
-                <li><a class="menu-options" href="https://evanpfeifer.github.io/projects">Projects</a></li>
-                <li><a class="menu-options" href="https://evanpfeifer.github.io/articles">Articles</a></li>
+                <li><a class="menu-options" href="projects">Projects</a></li>
+                <li><a class="menu-options" href="articles">Articles</a></li>
               </ul>
             </div>
             <div class="top-bar-right">
@@ -72,8 +73,6 @@
         </div>
       </div>
     </nav>
-
-
 
 <!-- *********************** NAME SECTION *********************** -->
     <section>
@@ -89,152 +88,214 @@
 
     <section class="main" id="main">
       <!-- My Approach to Life -->
-      <div class="projects" id="Projects">
-        <div class="wrap grid-x">
-          <div class="cell proj-intro">
-            <div class="projects-title">
-              <h1 style="font-family: 'Karla', sans-serif;">Projects</h1>
-            </div>
-            <hr>
-            <p>Here's a compendium of the side-projects I've completed so far. To see
-            what I've done and hear what I've learned, either continue scrolling or 
-            click one of the links below to go straight to a particular project.</p>
-            <ul class="proj-list" data-magellan>
-              <li><a href="#nfl-proj">NFL Big Data Bowl 2021</a>
-                <p>Custom clustering of NFL football plays to derive insights on defensive play efficacy.</p>
-              </li>
-              <!-- <li><a href="#swingpro-proj">SwingPro: A.I. powered golf swing analyzer</a></li> -->
-              <li><a href="#byow-proj">Nutstradamus: The Game</a></li>
-              <!-- <li><a href="#data-club-proj">Webber Academy Big Data Club</a></li> -->
-              <li><a href="#spam-proj">Spam or Ham</a></li>
-              <li><a href="#nba-proj">NBA Player PPG Prediction</a></li>
-              <li><a href="#pga-proj">PGA Tour EDA</a></li>
-              <li><a href="#pdf-proj">PDF Merger/Splitter</a></li>
-              <li><a href="#titanic-proj">Titanic Survival Prediction</a></li>
-              <li><a href="#foundation-proj">Foundation Web Template</a></li>
-            </ul>
+      <div class="projects" id="Articles">
+        <div class="wrap-articles grid-x">
+          
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/nflProj">
+                  <img class="proj-thumbnail" src="projectImages/nfl.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nflProj" class="proj-title">NFL Big Data Bowl 2021</a>
+
+                <div class="publish-date">
+                  <p>NOV 2020 - JAN 2021</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>For this years rendition of their annual analytics competition, the NFL asked contestants to uncover what makes a successful defense against passing plays. We suggest a custom-built clustering algorithm for NFL football plays, and provide a subsequent analysis of defensive play efficacy.</p>
+                  <p><strong>Skills & tools:</strong> Python, clustering, algorithm design, data cleaning/processing</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nflProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell nfl-proj project-section" id="nfl-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">NFL Big Data Bowl 2021</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/nfl.png" width="200px"/>
-            <p>The NFL captures real-time data for every player, on every play, in every situation — anywhere on the field. Each year, they hold an analytics competition to help draw insights from their plethora of positional data. This year, the NFL asked contestants to uncover what makes for a successful defense against passing plays.</p>
-            <p>My dad (John Pfeifer, who is also currently a computer science Ph.D student at the <a href="https://sydneyalgorithms.wordpress.com/people/" target="_blank">University of Sydney</a>) and I teamed up to bring forth a novel method to cluster football plays.</p>
-            <p>This project brought many challenges, many of which came from the formatting of the data and optimizing runtime of the algorithms to ensure they could run in a reasonable amount of time. Furthermore, this was my first project involving unsupervised learning.</p>
-            <p>We transformed positional data for each play into trajectories, and used Gonzalez clustering with dynamic time warp as our distance measure (rather than the typical Euclidean). Once plays were separated into clusters, we were then able to perform exploratory analytics to ascertain which defensive plays were most effective against certain offensive plays.</p>
-            <p><strong>Skills & tools:</strong> Python, clustering, algorithm design, data cleaning/processing</p>
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/nutstradamus">
+                  <img class="proj-thumbnail" src="projectImages/arcade.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nutstradamus" class="proj-title">Arcade Game: Nutstradamus</a>
+
+                <div class="publish-date">
+                  <p>NOV - DEC 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>In this capstone project for CS 61B (Data Structures & Algorithms) at UC Berkeley, my friend Jason Diwa and I built a tile-based game in Java. The game is complete with a custom algorithm to pseudo-randomly generate the playing field and an AI equipped with the A* algorithm to attempt to beat the human player.</p>
+                  <p><strong>Skills & tools:</strong> Managing complexity, Java, Git, UI design</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nutstradamus" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell byow-proj project-section" id="byow-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">Nutstradamus: The Game</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/arcade.png"/>
-            <p>For the capstone project in CS 61B at UC Berkeley, my friend <a href="https://github.com/jasondiwa" target="_blank">Jason Diwa</a> and I built a tile-based arcade game in Java. While we were provided with the tile-rendering engine, every other aspect of the design and implementation was left completely up to us.</p>
-            <img src="projectImages/nutstradamus.png"/>
-            <p>In the game, you play as Nutstradamus, a prophetic squirrel who seeks enlightenment and eternal salvation through collecting acorns. However, you are challenged by dogs who follow you in hot pursuit. If the dogs catch you before you have collected every acorn, you lose the game.</p>
-            <img src="projectImages/byow.png"/>
-            <p>The world map is pseudo-randomly generated, and the user inputs a seed to the game that is used in world-generation so the same world can be revisited. The first step in our algorithm is to randomly partition the entire field into rectangular sections like so:</p>
-            <img src="projectImages/partitions.png" width="300" height="300"/>
-            <p>Then, we randomly choose a portion of these partitions to be "rooms," and create random hallways until everything is connected. Once the map is created, the location of the squirrel, dogs, and acorns are randomly chosen.</p>
-            <p>The dogs continually chase you throughout the game, and are powered by the A* algorithm. We were able to repurpose code from another project in CS 61B that involved implementing A*. We elected the Manhattan distance hueristic for use in A*, as the player only has options to move up, down, left, and right.</p>
-            <p>Additional feautures that we added include save/load capabilities to return to the same game state later, the ability to toggle sight of the paths the dogs will take to get to you, and a heads-up display that shows information about each tile when the cursor is hovered over it.</p>
-            <p>While I had already been exposed to Git before this project, physically working off of the same code with another person was a new challenge. Working on separate branches and resolving merge conflicts was essentially new to me, and I learned lots about Git and general best practices in version control.</p>
-            <p>The design and implementation problems we faced were extremely challenging. Besides the fact that we spent over 40 hours on this project, we rewrote or scrapped hundreds of lines of code and had to battle the inevitably increasing complexity of our project. While each individual problem can be challenging on its own, we had to also think about finding a solution that elegantly fit in with the rest of the project. Given our time constrictions (we had just over two weeks to complete the project), I am very proud of our final product, and know that my skills in designing software have greatly improved.</p>
-            <p><strong>Skills & tools:</strong> Managing complexity, Java, Git, UI design</p>
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/spamHam">
+                  <img class="proj-thumbnail" src="projectImages/spam.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/spamHam" class="proj-title">Spam or Ham?</a>
+
+                <div class="publish-date">
+                  <p>NOV 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>The final project for DATA 100 (Principles & Techniques of Data Science) at UC Berkeley involved building a logistic regression model in Python to predict whether an email should go to the user's inbox or spam folder. I deployed natural language processing tools for feature engineering and cross validation to optimize model performance. My final model had over 97% accuracy.</p>
+                  <p><strong>Skills & tools:</strong> Logistic regression, Python, Natural Language Toolkit (NLTK)</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/spamHam" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell spam-proj project-section" id="spam-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">Spam or Ham</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/spam.png"/>
-            <p>In this project for DATA 100 at UC Berkeley, I created a logistic regression classifier that can distinguish spam (junk or commercial or bulk) emails from ham (non-spam) emails. The project was originally done in Python through a Jupyter Notebook. Scikit-learn was utilized for machine learning, Natural Language Toolkit (NLTK) for analyzing text data, and Seaborn/Matplotlib for visualizations.</p>
-            <p>This project involved exploratory data analysis to better understand the data, followed by feature selection and engineering for the model. The main features used in my model were distinctive words from results of NLTK analysis.</p>
-            <p>I used various visuals, ranging from the common (bar graph, density plots), to the unqiue (heat maps, ROC curve) to convey my findings and display model efficacy. The ROC curve is shown below, and the ROC area-under-curve (AUC) score is 0.9987. This means that 99.87% of the time, the model is more likely to classify a spam email as ham than a ham email as spam. In this context, favoring false positives over false negatives is desired.</p>
-            <img src="projectImages/roc.png" width="600"/>
-            <p>My final model had a training accuracy of 98.7%, 5-fold cross validation accuracy of 97.8%, and a test accuracy of 97.4%. I thought these results were quite good, especially given that the project was limited to logistic regression.</p>
-            <p>As the project is still in use for Data 100, the code and Jupyter Notebook cannot be shared publicly. However, I have transcibed essential information and all of the relevant visuals to LaTeX form, which can be seen <a href="https://github.com/evanpfeifer/spam-or-ham" target="_blank">here</a>.</p>
-            <p><strong>Skills & tools:</strong> Logistic regression, Python, Natural Language Toolkit (NLTK)</p>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/nbaProj">
+                  <img class="proj-thumbnail" src="projectImages/nba.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/nbaProj" class="proj-title">NBA PPG Prediction</a>
+
+                <div class="publish-date">
+                  <p>FEB - MAY 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>As a project for the Berkeley Data Science Society, three other members and I built and presented a model to predict NBA players’ average points per game (PPG) scored. We deployed hyperparameter tuning and cross validation techniques, and achieved an average error of under 2 points per game.</p>
+                  <p><strong>Skills & tools:</strong> Python, feature engineering, hyperparameter tuning</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/nbaProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <!-- ************************** -->
-          <!-- **** NOT FINISHED YET **** -->
-          <!-- ************************** -->
 
-          <!-- <div class="cell swingpro-proj project-section" id="swingpro-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">SwingPro: A.I. powered golf swing analyzer</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/tiger.png"/>
-            <p>In my most ambitious project yet, I built a model that tells you what PGA Tour professional your golf swing most closely resembles.</p>
-            <p>The model utilizes a cutting-edge convolutional neural network from <a href="https://arxiv.org/abs/1705.07750" target="_blank">researchers at Google</a>. In particular, the model uses RGB data (i.e. videos) as input. Academic literature suggests that RBG models have better performace than models that use 2-dimensional joint data. Training data was scraped from Youtube and <a href="https://arxiv.org/abs/1903.06528" target="_blank">GolfDB</a>, with preprocessing done mainly through Google's open source methods.</p>
-            <p>The model's accuracy was determined through testing how well it can identify unseen videos of the same PGA Tour players that it was trained on. These tests gave a XX% accuracy rate.</p>
-            <p>To see the codebase of the project, check out <a href="https://github.com/evanpfeifer/SwingPro" target="_blank">this</a> Github repository.</p>
-            <p>I have many goals for the future of the project. I am currently developing the project into an iOS app using Swift, and hope to add aditional functionalities, most notably swing analysis through adding joint-tracking lines (utilizing CMU's OpenPose).</p>
-            <p><strong>Skills & tools:</strong> Computer vision, machine learning, Swift, iOS development</p>
-          </div> -->
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/pgaProj">
+                  <img class="proj-thumbnail" src="projectImages/tiger.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/pgaProj" class="proj-title">PGA Tour EDA</a>
 
-          <!-- ************************** -->
-          <!-- **** NOT FINISHED YET **** -->
-          <!-- ************************** -->
+                <div class="publish-date">
+                  <p>OCT - DEC 2019</p>
+                </div>
 
-          <!-- <div class="cell data-club-proj project-section" id="data-club-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">Webber Academy Big Data Club</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/webber.png"/>
-            <p>I graduated from Webber Academy in 2019, and am staying involved in the community through collaboration with the new Big Data Club for high school students. As someone who was not exposed to computing and data science topics before university, I hope to help make the Big Data Club a resource for students to build data literacy skills earlier on.</p>
-            <p>I am currently building interactive Jupyter notebooks and instructional videos on various topics in data science. To see the notebooks, check out <a href="https://github.com/evanpfeifer" target="_blank">this</a> Github repo. Feel free to take a look at some of the videos below:</p>
-            	<ul class=proj-bullets>
-            		<li><a href="https://youtube.com" target="_blank">Classification and KNN</a></li>
-            	</ul>
-            <p>Furthermore, particularly motivated students are partaking in the STEM Fellowship <a href="https://stemfellowship.org/2020-21-hsbdc/" target="_blank">Big Data Challenge,</a> and I am available to help students with the data processing, visualization, and modeling aspects of their projects.</p>
-            <p><strong>Skills & tools:</strong> Pedagogy, public speaking, rudimentary statistics & data science</p>
-          </div> -->
+                <div class="article-beginning">
+                  <p>I performed exploratory data analysis (EDA) on PGA Tour data from 2017 to determine what aspects of a player's game have the largest impact on player season earnings.</p>
+                  <p><strong>Skills & tools:</strong> Python, data processing, feature creation, data visualization</p>
+                </div>
 
-          <div class="cell nba-proj project-section" id="nba-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">NBA Player PPG Prediction</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/nba.png"/>
-            <p>I developed a machine learning regression model alongside three other Berkeley Data Science Society members to predict NBA players’ average points per game (PPG) scored. We deployed hyperparameter tuning and cross validation techniques.</p>
-            <p>This project involved a deeper dive into machine learning model creation and optimization than any of my previous work. To see the Jupyter notebook for this project, click <a href="https://github.com/evanpfeifer/nba-player-data" target="_blank">here.</a></p>
-            <p><strong>Skills & tools:</strong> Python, feature engineering, hyperparameter tuning</p>
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/pgaProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell pga-proj project-section" id="pga-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">PGA Tour EDA</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/tiger.png"/>
-            <p>I'm an avid golfer, so I was thrilled to combine my passions for golf and computing when I saw the plethora of data available from the PGA Tour.</p> 
-            <p>I performed exploratory data analysis (EDA) on PGA Tour data from 2017 to determine what aspects of a player's game have the largest impact on player season earnings. Take a look at the Jupyter notebook <a href="https://github.com/evanpfeifer/pga-tour-eda" target="_blank">here.</a></p>
-            <p><strong>Skills & tools:</strong> Python, data processing, feature creation, data visualization</p>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="right-article">
+                <a href="https://evanpfeifer.github.io/pdfProj">
+                  <img class="proj-thumbnail" src="projectImages/pdf.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/pdfProj" class="proj-title">PDF Merger/Splitter</a>
+
+                <div class="publish-date">
+                  <p>DEC 2019 - JAN 2020</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>I used the PyPDF2 library to assist with the actual splitting/merging of PDF documents, then created a GUI for easier use using Tkinter.</p>
+                  <p><strong>Skills & tools:</strong> Python, object-oriented programming, GUIs</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/pdfProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell pdf-proj project-section" id="pdf-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">PDF Merger/Splitter</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/pdf.png"/>
-            <p>Unlike most of my other projects, this one began as the result of a real world problem that I faced (well... at least sort of). The top hit on Google for PDF mergers required a monthly fee to be used. While I'm sure there are free versions out there, I took the opportunity to create my own PDF merger/splitter from scratch.</p>
-            <p>I used the PyPDF2 library to assist with the actual splitting/merging of PDF documents, then created a GUI for easier use using Tkinter. In fact, I still use this program whenever I need to merge or split PDFs. Take a look at the code for the project <a href="https://github.com/evanpfeifer/pdf-modifier" target="_blank">here.</a></p>
-            <p><strong>Skills & tools:</strong> Python, object-oriented programming, GUIs</p>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/titanicProj">
+                  <img class="proj-thumbnail" src="projectImages/titanic.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/titanicProj" class="proj-title">Titanic Survival Prediction</a>
+
+                <div class="publish-date">
+                  <p>AUG - OCT 2019</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>For my first data science project, I elected to work off of the Titanic dataset from the popular Kaggle competition. I employed binary classification and rudimentary machine learning techniques to create a model to predict survival of passengers on the RMS Titanic.</p>
+                  <p><strong>Skills & tools:</strong> Python, data cleaning, machine learning</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/titanicProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell titanic-proj project-section" id="titanic-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">Titanic Survival Prediction</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/titanic.png"/>
-            <p>For my first data science project, I elected to work off of the Titanic dataset from the highly popular <a href="https://www.kaggle.com/c/titanic" target="_blank">Kaggle competition.</a> I employed binary classification and rudimentary machine learning techniques to create a model to predict survival of passengers on the RMS Titanic.</p>
-            <p>For this project, my main goal was to gain a solid grasp of the data sciece lifecycle, from data cleanup, to model creation and interpretation. Click <a href="https://github.com/evanpfeifer/titanic-prediction" target="_blank">here</a> to see the Jupyter notebook for this project.</p>
-            <p><strong>Skills & tools:</strong> Python, data cleaning, machine learning</p>
+
+
+          <div class="cell small-12 large-6">
+            <header class="proj-cell">
+              <div class="left-article">
+                <a href="https://evanpfeifer.github.io/foundationProj">
+                  <img class="proj-thumbnail" src="projectImages/foundation.png">
+                </a>
+                <a href="https://evanpfeifer.github.io/foundationProj" class="proj-title">Foundation Website Template</a>
+
+                <div class="publish-date">
+                  <p>MAY - JUNE 2019</p>
+                </div>
+
+                <div class="article-beginning">
+                  <p>Everyone starts somewhere, and I more or less started here. This project involved using Zurb's Foundation framework for responsive design to create a generic website template. This was my first major coding project, and introduced me to concepts like web design, UI/UX, and project workflow. The template incorporates responsive design, and is optimized for mobile.</p>
+                  <p><strong>Skills & tools:</strong> HTML5, CSS, javascript, Foundation</p>
+                </div>
+
+                <div class="cont-reading-button">
+                  <a href="https://evanpfeifer.github.io/foundationProj" class="button cont-reading-button-extra">CONTINUE READING</a>
+                </div>
+              </div>
+            </header>
           </div>
 
-          <div class="cell foundation-proj project-section" id="foundation-proj">
-            <hr>
-            <h2 style="font-family: 'Karla', sans-serif;">Foundation Web Template</h2>
-            <img class="portfolio-hero-header-logo" src="projectImages/foundation.png"/>
-            <p>Everyone starts somewhere, and I more or less started here. This project
-            involved using <a href="https://get.foundation" target="_blank">Zurb's Foundation</a> framework for responsive design to create a generic website template. This was my first major coding project, and introduced me to concepts like web design, UI/UX, and project workflow. The template incorporates responsive design, and is optimized for mobile.</p>
-            <p>These skills came in handy when building this very website, which also relies on Foundation for responsive design. If you'd like to see the code for the template, click <a href="https://github.com/evanpfeifer/foundation-site-template" target="_blank">here.</a> For the source code for this website, click <a href="https://github.com/evanpfeifer/evanpfeifer.github.io" target="_blank">here.</a></p>
-            <p><strong>Skills & tools:</strong> HTML5, CSS, javascript, Foundation</p>
-          </div>
+
+
 
         </div>
       </div>
@@ -248,6 +309,7 @@
 
     </div>
     </div>
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
