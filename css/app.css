@@ -504,7 +504,7 @@ PROJECTS
   color: #4c4f52;
 }
 
-.partitionsImage, .rocCurveImage {
+.partitionsImage, .rocCurveImage, .articleImage {
   display: block;
   margin-left: auto;
   margin-right: auto;

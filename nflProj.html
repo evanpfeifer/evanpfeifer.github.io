@@ -102,11 +102,18 @@
 
                 <div class="article-body">
                   <p>The NFL captures real-time data for every player, on every play, in every situation — anywhere on the field. Each year, they hold an analytics competition to help draw insights from their plethora of positional data. This year, the NFL asked contestants to uncover what makes for a successful defense against passing plays.</p>
-                  <p>My dad (John Pfeifer, who is also currently a computer science Ph.D student at the <a href="https://sydneyalgorithms.wordpress.com/people/" target="_blank">University of Sydney</a>) and I teamed up to bring forth a novel method to cluster football plays.</p>
+                  <p>To determine the effectiveness of various defensive plays, one can simply use existing data fields such as offensive formation or defenders in the box. However, these fields contain very coarse information and may not offer key insight into play efficacy. I contributed a novel data mining method that automatically determines a set of offensive and defensive play type categories based on the movement of the players and the football. I also had some help from my dad (John Pfeifer, who is also currently a computer science Ph.D student at the <a href="https://sydneyalgorithms.wordpress.com/people/" target="_blank">University of Sydney</a>).</p>
                   <p>This project brought many challenges, many of which came from the formatting of the data and optimizing runtime of the algorithms to ensure they could run in a reasonable amount of time. Furthermore, this was my first project involving unsupervised learning.</p>
-                  <p>We transformed positional data for each play into trajectories, and used Gonzalez clustering with dynamic time warp as our distance measure (rather than the typical Euclidean). Once plays were separated into clusters, we were then able to perform exploratory analytics to ascertain which defensive plays were most effective against certain offensive plays.</p>
+                  <p>I transformed positional data for each play into trajectories, and used Gonzalez clustering with dynamic time warping used as the distance measure. Once plays were separated into clusters, I was then able to perform exploratory analytics to ascertain which defensive plays were most effective against certain offensive plays.</p>
+                  <p>To show the model's efficacy, in the example below, the model classified the two plays as being in the same cluster. It can visibly be seen that the two plays are similar, but not quite identical.</p>
+                  <img class="articleImage" src="projectImages/nflPlays.png">
+                  <p>We can also see which defensive clusters resulted in, on average, the least number of yards gained by the offense.</p>
+                  <img class="articleImage" src="projectImages/defClusters.png">
+                  <p>It can also be seen that different offensive and defensive play clusters have varying efficacy against each other:</p>
+                  <img class="articleImage" src="projectImages/nflHeatmap.png">
+                  <p>In the future, perhaps I would explore using other trajectory distance measures such as the Fréchet distance (this computes a worst-case distance, but may be useful for some types of analysis). Other clustering algorithms such as k-means or more advanced algorithms may result in more meaningful clusters. Furthermore, the supplied tracking table usually did not include all players movement - it would be interesting to see clusters that are created from "full" data.</p>
+                  <p>Take a look at the full report and the code for the preprocessing and clustering <a href="https://github.com/evanpfeifer/nfl-big-data-bowl">here</a>.</p>
                   <p><strong>Skills & tools:</strong> Python, clustering, algorithm design, data cleaning/processing</p>
-
                 </div>
 
               </div>
