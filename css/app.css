@@ -573,4 +573,8 @@ MOBILE
     float: left;
     padding-top: 20px;
   }
+
+  .single-article-title {
+    font-size: 240%;
+  }
 }
