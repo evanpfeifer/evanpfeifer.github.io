@@ -313,6 +313,10 @@ MAIN
   width: 100%;
 }
 
+.jet-bridge {
+  height: 500px;
+}
+
 .article-photo-caption {
   font-size: 70%;
   padding-bottom: 20px;
@@ -504,7 +508,7 @@ PROJECTS
   color: #4c4f52;
 }
 
-.partitionsImage, .rocCurveImage, .articleImage {
+.partitionsImage, .rocCurveImage, .articleImage, .jet-bridge {
   display: block;
   margin-left: auto;
   margin-right: auto;
