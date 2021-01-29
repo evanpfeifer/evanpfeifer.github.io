@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
-  <body>
+  <body id="the-body">
     <div class="off-canvas-wrapper">
       <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
         <ul class="vertical menu" data-magellan>
@@ -31,7 +31,7 @@
 
 <!-- *********************** MOBILE NAVIGATION *********************** -->
     <div class="off-canvas-content" data-off-canvas-content>
-      <div class="title-bar show-for-small-only" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+      <div class="title-bar show-for-small-only" data-sticky data-top-anchor="the-body:top" data-options="marginTop: 0; stickyOn: small;">
         <div class="title-bar-left">
           <div class="mobile-menu-button">
             <button class="menu-icon" type="button" data-open="mobile-menu"></button>
@@ -52,9 +52,9 @@
 
 <!-- *********************** DESKTOP NAVIGATION *********************** -->
     <nav class="top-bar-container hide-for-small-only" data-sticky-container>
-      <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+      <div class="sticky sticky-topbar" data-sticky data-top-anchor="the-body:top" data-options="marginTop: 0; stickyOn: small;">
         <div class="top-bar">
-          <div class="wrap-articles">
+          <div class="wrap">
             <div class="top-bar-left">
               <ul class="menu menu-hover-lines" data-magellan>
                 <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
