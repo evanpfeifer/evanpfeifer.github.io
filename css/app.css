@@ -247,7 +247,7 @@ MAIN
 
 .logos {
   font-size: 10px; 
-  /* Gaving alignment issues; did an ugly fix with a tranform */
+  /* Having alignment issues; did an ugly fix with a tranform */
   transform: translate(0%, 8%);
 }
 
