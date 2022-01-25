@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f4b1497183.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NumC - Evan Pfeifer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to Foundation CSS and CSS override (app.css) -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body id="the-body">
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+        <ul class="vertical menu" data-magellan>
+          <li><a href="https://evanpfeifer.github.io">Home</a></li>
+          <li><a href="https://evanpfeifer.github.io/projects">Projects</a></li>
+          <li><a href="https://evanpfeifer.github.io/articles">Articles</a></li>
+        </ul>
+      </div>
+
+
+
+<!-- *********************** MOBILE NAVIGATION *********************** -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar show-for-small-only" data-sticky data-top-anchor="the-body:top" data-options="marginTop: 0; stickyOn: small;">
+        <div class="title-bar-left">
+          <div class="mobile-menu-button">
+            <button class="menu-icon" type="button" data-open="mobile-menu"></button>
+            <span class="title-bar-title">MENU</span>
+          </div>
+            <div class="top-bar-right-mobile">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- *********************** DESKTOP NAVIGATION *********************** -->
+    <nav class="top-bar-container hide-for-small-only" data-sticky-container>
+      <div class="sticky sticky-topbar" data-sticky data-top-anchor="the-body:top" data-options="marginTop: 0; stickyOn: small;">
+        <div class="top-bar">
+          <div class="wrap">
+            <div class="top-bar-left">
+              <ul class="menu menu-hover-lines" data-magellan>
+                <li><a class="menu-options" href="https://evanpfeifer.github.io">Home</a></li>
+                <li><a class="menu-options" href="projects">Projects</a></li>
+                <li><a class="menu-options" href="articles">Articles</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu menu-hover-lines logos">
+                <li><a class="linkedin" href="https://www.linkedin.com/in/evan-pfeifer/" target="_blank"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                <li><a class="github" href="https://github.com/evanpfeifer" target="_blank"><i class="fab fa-github fa-4x"></i></a></li>
+                <li><a class="email" href="mailto:evanpfeifer@berkeley.edu"><i class="fas fa-envelope-square fa-4x"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- *********************** NAME SECTION *********************** -->
+    <section>
+      <div class="wrap">
+        <a href="https://evanpfeifer.github.io">
+          <img src="name.png" class="fullname">
+        </a>
+      </div>
+    </section>
+
+
+<!-- *********************** MAIN SECTION *********************** -->
+
+    <section class="main" id="main">
+      <!-- Main Article -->
+      <div class="articles" id="Articles">
+        <div class="wrap grid-x">
+          <div class="cell">
+            <header class="single-article-cell">
+              <div class="single-article">
+                <img class="article-thumbnail" src="projectImages/multiThread.png">
+                <h2 class="single-article-title">NumC</h2>
+
+                <div class="single-publish-date">
+                  <p>NOV - DEC 2021</p>
+                </div>
+
+                <div class="article-body">
+                  <p>In the final project of UC Berkeley's CS 61C (Computer Architecture/Machine Structures), many of the core topics of the class came together to produce NumC, a package that performs matrix operations similarly to the popular Python library NumPy.</p>
+                  <p><strong>Skills & tools:</strong> C, OpenMP, Intel Intrinsics, SIMD, multi-threading, data parallelism</p>
+                </div>
+
+              </div>
+            </header>
+          </div>
+
+          <div class="cell bottom-of-article">
+            <hr>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-last">
+              <div class="prev-post-label">
+                <p>PREVIOUS PROJECT</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/nflProj" class="last-post-link">NFL Big Data Bowl 2021</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell small-6 medium-6 large-6">
+            <div class="read-next">
+              <div class="next-post-label">
+                <p>NO NEWER PROJECTS</p>
+              </div>
+              <div>
+                <a href="https://evanpfeifer.github.io/projects" class="next-post-link">Return to project menu</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cell">
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+    </footer>
+
+
+    </div>
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
